@@ -21,10 +21,11 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
   isparrallaxVisible = true;
 
   images = [
-    'images/personal/YPS01060.JPG',
-    'images/personal/YPS01040.JPG',
-    'images/personal/YPS00943.JPG',
-    'images/personal/YPS00886.JPG',
+    // 'images/personal/YPS01060.JPG',
+    'images/personal/11-11.jpeg',
+    'images/personal/traditional.jpeg',
+    'images/personal/tdp.jpeg',
+    // 'images/personal/YPS00886.JPG',
   ];
   currentIndex = 0;
   ssInterval: any;
@@ -42,7 +43,7 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
   ngOnInit() {
     this.setCountdown();
   }
-  
+
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.updateHeight(); 
