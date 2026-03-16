@@ -56,6 +56,9 @@
     .bit {
         text-align: right;
         padding: 10% 4%;
+        float: right;
+        width: 50%;
+      font-size: 2rem;
     }
 }
 .meet-groom-img{
@@ -70,7 +73,9 @@
     height: 100%;
     width: 100%;
     .git{
-        padding: 4%;
+      padding: 4%;
+      width: 50%;
+      font-size: 2rem;
     }
 }
 
@@ -326,5 +331,13 @@
 @media (min-width: 576px) {
   .slideshow img {
     object-fit: contain;
+  }
+}
+@media screen and (max-width: 768px) {
+  .meet-bride-img, .meet-groom-img{
+  .bit, .git {
+    font-size: 0.875rem;
+  }
+
   }
 }
