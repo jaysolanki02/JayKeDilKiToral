@@ -23,11 +23,14 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
   isparrallaxVisible = true;
 
   images = [
-    // 'images/personal/YPS01060.JPG',
-    'images/personal/11-11.jpeg',
+    'images/personal/t-j-4.jpeg',
+    'images/personal/t-j-1.jpeg',
     'images/personal/traditional.jpeg',
+    'images/personal/t-j-3.jpeg',
+    'images/personal/t-j-2.jpeg',
+    'images/personal/t-j-5.jpeg',
     'images/personal/tdp.jpeg',
-    // 'images/personal/YPS00886.JPG',
+    'images/personal/11-11.jpeg',
   ];
   currentIndex = 0;
   ssInterval: any;
@@ -77,7 +80,7 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
     this.content.nativeElement.style.minWidth = (this.hero.nativeElement.offsetWidth -1) + 'px';
     const rect = this.content.nativeElement.getBoundingClientRect();
 
-    this.isparrallaxVisible = rect.top < window.innerHeight && rect.bottom >= 100;
+    this.isparrallaxVisible = rect.top < window.innerHeight && rect.bottom >= 200;
     if (this.isparrallaxVisible) {
       this.setbgPositionAndScroll();
     }
@@ -99,11 +102,11 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
       margin = window.innerHeight;
     }
       wedTitle.style.minHeight = factor * margin + 'px' ;
-      if(wedTitle.style.fontSize === '5rem') {
-        wedTitle.style.fontSize = '6rem';
-      } else {
-        wedTitle.style.fontSize = '5rem'
-      }
+      // if(wedTitle.style.fontSize === '5rem') {
+      //   wedTitle.style.fontSize = '6rem';
+      // } else {
+      //   wedTitle.style.fontSize = '5rem'
+      // }
     }, 1160);
   }
 

@@ -1,5 +1,5 @@
 .root-landing-img{
-    background: url("../../../../public/images/personal/YPS00815.JPG");
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00815.JPG");
     // background-image: url("../../../../public/images/personal/YPS00815.JPG");
 
     background-size: cover;
@@ -15,12 +15,12 @@
         color: white;
         transition: all 1s ease;
         font-size: 5rem;
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     }
 }
 
 .hands-together-img{
-    background: url("../../../../public/images/personal/YPS00886.JPG");
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00886.JPG");
     // background-image: url("../../../../public/images/personal/YPS00815.JPG");
 
     background-size: cover;
@@ -45,8 +45,8 @@
 }
 
 .meet-bride-img{
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url("../../../../public/images/personal/YPS01040.JPG"),
-    url("../../../../public/images/pattern-1.png") ;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("../../../../public/images/personal/YPS01040.JPG"),
+    url("../../../../public/images/pint/download-7.jpg") ;
     // background-image: url("../../../../public/images/personal/YPS00815.JPG");
     border-radius: 0 20px;
     background-size: cover, contain;
@@ -56,16 +56,16 @@
     height: 100%;
     width: 100%;
     .bit {
-        text-align: right;
-        padding: 10% 4%;
-        float: right;
-        width: 50%;
+      text-align: left;
+      padding: 4% 2% 0 0;;
+      float: right;
+      width: 50%;
       font-size: 2rem;
     }
 }
 .meet-groom-img{
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url("../../../../public/images/personal/YPS01060.JPG"),
-    url("../../../../public/images/pattern-1.png");
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("../../../../public/images/personal/YPS01060.JPG"),
+    url("../../../../public/images/pint/download-7.jpg");
     // background-image: url("../../../../public/images/personal/YPS00815.JPG");
     border-radius: 0 20px;
     background-size: cover, contain;
@@ -75,14 +75,14 @@
     height: 100%;
     width: 100%;
     .git{
-      padding: 4%;
+      padding: 4% 0 0 4%;
       width: 50%;
       font-size: 2rem;
     }
 }
 
 .events-container {
-  background-image: url("../../../../public/images/pint/download-5.jpg");
+  background-image: url("../../../../public/images/pint/download-7.jpg");
   text-align: center;
   // color: white;
   align-content: space-evenly;
@@ -92,7 +92,7 @@
 }
 
 .things-to-know {
-  background-image: url("../../../../public/images/pint/download-2.jpg");
+  background-image: url("../../../../public/images/pint/download-7.jpg");
   text-align: center;
   // color: white;
   // align-content: space-evenly;
@@ -100,32 +100,40 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: 10% 5%;
-  color: #d5d2fd;
+  color: #734836;
+  .hashtag {
+    justify-items: center;
+  }
   .insta-logo {
-    height: 100px;
-    width: 100px;
+    width: 120px;
+    height: 120px;
+    margin: 10%;
+    background-image: url("../../../../public/svg/insta-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
   }
   .txt {
     padding: 7%;
     border-radius: 30% 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   }
 }
 
 .memories-container {
-  padding: 6% 6% 12% 6%;
-  background-image: url("../../../../public/images/pint/download-6.jpg");
+  padding: 6% 6% 20% 6%;
+  background-image: url("../../../../public/images/pint/download-7.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #feb459;
+  color: #734836;
   
   .msg {
     padding: 7%;
     border-radius: 30% 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   }
   
   .pad {
@@ -135,7 +143,7 @@
 }
 
 .content {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  // background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   border-radius: 25%;
   padding: 12%;
   position: absolute;
@@ -352,7 +360,7 @@
 @media screen and (max-width: 768px) {
   .meet-bride-img, .meet-groom-img{
   .bit, .git {
-    font-size: 0.875rem;
+    font-size: 1.2rem;
   }
 
   }

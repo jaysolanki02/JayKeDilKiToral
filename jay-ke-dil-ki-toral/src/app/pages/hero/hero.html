@@ -1,18 +1,7 @@
 <div #handsTogether class=" hands-together-img" >
     <div class="photo-frame-up photo-frame-down"></div>
 </div>
-<div #eventsTemp class="events-container">
-    <div class="photo-frame-up photo-frame-down"></div>
 
-    <div class="fade-in" [ngClass]="{'show': !isparrallaxVisible}">
-        <h1>
-            On Friday, 1st May 2026 10:00 am onwards
-        </h1>
-        <h2> ~~~ Venue ~~~ </h2>
-        <h3>Damodar Wadi, Ashok Chakravarti Road, Ashok Nagar, Kandivali (E), Mumbai - 101.</h3>
-        <a (click)="onVenueClick()" >Click Here for Direction</a>
-    </div>
-</div>
 
 <div #hero class="hero root-landing-img  " >
     <div class="photo-frame-up photo-frame-down"></div>
@@ -23,10 +12,19 @@
     </div>
 </div>
 <!-- <div #meetTheCouple class="meet-couple-img  " ></div> -->
-<div #meetTheBride class="meet-bride-img " >
+<div #meetTheBride class="meet-bride-img" >
     <div class="bit">
-        <div >
-            Toral is a creative soul and a passionate interior designer who finds beauty in the smallest details of life. A simple girl with a warm smile, she carries a natural charm wherever she goes. Chirpy and happy-go-lucky, she believes in living life with positivity and gratitude towards the universe. With her giving nature and deep love for family, she brings warmth, understanding, and light to everyone around her. ✨
+        <div>
+            Toral is a creative soul and a passionate interior designer who finds beauty in the smallest details of life. 
+        </div>
+        <div>
+            A simple girl with a warm smile, she carries a natural charm wherever she goes. 
+        </div>
+        <div>
+            Chirpy and happy-go-lucky, she believes in living life with positivity and gratitude towards the universe. 
+        </div>
+        <div>
+            With her giving nature and deep love for family, she brings warmth, understanding, and light to everyone around her. ✨            
         </div>
     </div>
 
@@ -36,7 +34,18 @@
 <div #meetTheGroom class="meet-groom-img " >
     <div class="git">
         <!-- <h1 >tareef ke 2 shabd</h1> -->
-        <div >Jay is a calm and grounded soul who brings a sense of warmth wherever he goes. A talented coding engineer by profession, he is known for his sharp mind and thoughtful approach to life. Deeply family-oriented and blessed with a giving nature, Jay believes in standing by the people he loves. With his handsome charm and kind heart, he truly is someone who makes life brighter for those around him. ✨</div>
+         <div>
+            Jay is a calm and grounded soul who brings a sense of warmth wherever he goes.
+         </div>
+         <div>
+            A talented coding engineer by profession, he is known for his sharp mind and thoughtful approach to life.
+         </div>
+         <div>
+            Deeply family-oriented and blessed with a giving nature, Jay believes in standing by the people he loves. 
+         </div>
+         <div>
+            With his handsome charm and kind heart, he truly is someone who makes life brighter for those around him. ✨
+         </div>
         <!-- <h4 >Lorem Ipsum</h4> -->
 
     </div>
@@ -48,18 +57,19 @@
 
     <div class="msg">
         <h1>A Message from Jay & Toral</h1>
-        <h3>
+        <h2>
             It began with two families, a simple introduction, and a little curiosity. Somewhere between conversations and laughter, we found something beautiful — a bond that felt just right.
-        </h3>
-        <h3>
+        </h2>
+        <h2>
             With love, blessings, and a little bit of destiny, we are beginning our forever together. We would be delighted to celebrate this special moment with you.
-        </h3>
-        <h3>
+        </h2>
+        <h2>
             With love,
-        </h3>
-        <h3>
-            Jay & Toral ✨
-        </h3>
+        </h2>
+        <h1>
+            Jay & Toral 
+        </h1>
+        <div>✨</div>
     </div>
     <div class="slideshow" 
     (touchstart)="onTouchStart($event)"
@@ -80,9 +90,27 @@
             </span>
         </div>
     </div>
-    <h1 class="msg pad">
-        Looking forward to see you.
-    </h1>
+</div>
+<div #eventsTemp class="events-container">
+    <div class="photo-frame-up photo-frame-down"></div>
+
+    <div class="fade-in" [ngClass]="{'show': !isparrallaxVisible}">
+        
+        <h1>
+            Looking forward to see you
+        </h1>
+        <h1>
+            on Friday, 1st May 2026
+        </h1>
+        <h2> ~~~ Venue ~~~ </h2>
+        <h3>Damodar Wadi, Ashok Chakravarti Road, Ashok Nagar, Kandivali (E), Mumbai - 101.</h3>
+        <h2> ~~~ Timing ~~~ </h2>
+        <h3>10:00 am onwards</h3>
+        
+        <h3><a (click)="onVenueClick()" >📍Click Here for Direction</a></h3>
+
+        
+    </div>
 </div>
 
 <div #thingsToKnow class="things-to-know">
@@ -92,17 +120,15 @@
         <h1>
             Things to know
         </h1>
-        <h4>
+        <h3>
             To help you feel at ease and enjoy every moment of the celebrations, we’ve gathered a few thoughtful details we’d love for you to know before the big day.
-        </h4>
+        </h3>
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 hashtag">
                     <h1>Hashtag</h1>
-                    <div>
-                        <img class="insta-logo" [src]="'images/insta.png'" alt="insta" srcset="">
-                    </div>
-                    <div>While posting photos on social media please use the hashtag - <div>#JayKeDilKiToral</div></div>
+                    <div class="insta-logo"></div>
+                    <h3>While posting photos on social media please use the hashtag - <h1>#JayKeDilKiToral</h1></h3>
                 </div>
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4"></div>
@@ -117,9 +143,9 @@
                             {{countdown?.minutes | number:'2.0-0'}} :
                             {{countdown?.seconds | number:'2.0-0'}}
                         </div>
-                        <h4>
+                        <h3>
                             Our families are excited that you are able to join us in celebrating what we hope will be one of the happiest days of our lives!
-                        </h4>
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -156,7 +182,7 @@
                             Daughter of Mr. Harshad Tribhuvandas Makani &
                         </div>
                         <div>
-                            Mrs. Mamta Harshad Makania
+                            Mrs. Mamta Harshad Makani
 
                         </div>
                     </div>
