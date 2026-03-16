@@ -41,13 +41,12 @@ export class Hero implements AfterViewInit {
     this.meetTheGroom.nativeElement.style.height = this.meetTheGroom.nativeElement.offsetWidth/1.5 + 'px';
     
     this.content.nativeElement.style.minWidth = (this.hero.nativeElement.offsetWidth -5) + 'px';
-    this.setbgPositionAndScroll();
     const rect = this.content.nativeElement.getBoundingClientRect();
 
-    this.isparrallaxVisible =
-      rect.top < window.innerHeight &&
-      rect.bottom >= 0;
-
+    this.isparrallaxVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+    if (this.isparrallaxVisible) {
+      this.setbgPositionAndScroll();
+    }
   }
 
   setHeartbeatToFonts() {
