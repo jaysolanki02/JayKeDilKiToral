@@ -16,7 +16,7 @@ export class Hero implements AfterViewInit {
 
 
   bgPosition = '';
-  glImg = '/images/ganesha.png';
+  glImg = 'images/ganesha.png';
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.updateHeight(); 
