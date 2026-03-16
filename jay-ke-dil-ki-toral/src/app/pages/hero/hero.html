@@ -1,6 +1,17 @@
 <div #handsTogether class="down-fade hands-together-img" >
     <div class="photo-frame-up photo-frame-down"></div>
 </div>
+<div #eventsTemp class="events-container">
+    <div class="fade-in" [ngClass]="{'show': !isparrallaxVisible}">
+        <h1>
+            On Friday, 1st May 2026 10:00 am onwards
+        </h1>
+        <h2> ~~~ Venue ~~~ </h2>
+        <h3>Damodar Wadi, Ashok Chakravarti Road, Ashok Nagar, Kandivali (E), Mumbai - 101.</h3>
+        <a (click)="onVenueClick()" >Click Here for Direction</a>
+    </div>
+</div>
+
 <div #hero class="hero root-landing-img up-fade down-fade" >
     <div class="photo-frame-up photo-frame-down"></div>
     <div class="mbg fade-in" [ngClass]="{'show': !isparrallaxVisible}">
@@ -8,8 +19,6 @@
         <div>the</div>
         <div>Bride & Groom</div>
     </div>
-
-
 </div>
 <!-- <div #meetTheCouple class="meet-couple-img up-fade down-fade" ></div> -->
 <div #meetTheBride class="meet-bride-img up-fade" >
@@ -42,11 +51,45 @@
             </span>
         </div>
     </div>
-    <div class="countdown-t">
-        <span *ngIf="countdown?.days">{{countdown?.days}} days, </span> 
-        {{countdown?.hours | number:'2.0-0'}} :
-        {{countdown?.minutes | number:'2.0-0'}} :
-        {{countdown?.seconds | number:'2.0-0'}}
+</div>
+
+<div #thingsToKnow class="things-to-know">
+    <div class="fade-in" [ngClass]="{'show': !isparrallaxVisible}">
+        <h1>
+            Things to know
+        </h1>
+        <h4>
+            To help you feel at ease and enjoy every moment of the celebrations, we’ve gathered a few thoughtful details we’d love for you to know before the big day.
+        </h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Hashtag</h1>
+                    <div>
+                        <img [src]="'images/insta.png'" alt="ganesha" srcset="">
+                    </div>
+                    <div>While posting photos on social media please use the hashtag - <div>#JayKeDilKiToral</div></div>
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 offset-sm-2">
+                    <div class="countdown-t">
+                        <h1>The countdown begins</h1>
+                        <div>
+                            <span *ngIf="countdown?.days">{{countdown?.days}} days, </span> 
+                            {{countdown?.hours | number:'2.0-0'}} :
+                            {{countdown?.minutes | number:'2.0-0'}} :
+                            {{countdown?.seconds | number:'2.0-0'}}
+                        </div>
+                        <h4>
+                            Our families are excited that you are able to join us in celebrating what we hope will be one of the happiest days of our lives!
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

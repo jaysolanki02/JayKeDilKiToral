@@ -61,6 +61,12 @@ html {
   font-size: clamp(6px, 1vw + 0.5rem, 10px);
 }
 
+a {
+  text-decoration: none;
+  color: wheat;
+  cursor: pointer;
+}
+
 .fade-in {
   opacity: 0;
   transition: opacity 0.4s ease;

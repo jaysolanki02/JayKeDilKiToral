@@ -17,6 +17,8 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('meetTheBride') meetTheBride!: ElementRef;
   @ViewChild('meetTheGroom') meetTheGroom!: ElementRef;
   @ViewChild('memoriesSS') memoriesSS!: ElementRef;
+  @ViewChild('eventsTemp') eventsTemp!: ElementRef;
+  @ViewChild('thingsToKnow') thingsToKnow!: ElementRef;
 
   isparrallaxVisible = true;
 
@@ -68,12 +70,14 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
     this.handsTogether.nativeElement.style.height = this.handsTogether.nativeElement.offsetWidth/1.5 + 'px';
     this.meetTheBride.nativeElement.style.height = this.meetTheBride.nativeElement.offsetWidth/1.5 + 'px';
     this.meetTheGroom.nativeElement.style.height = this.meetTheGroom.nativeElement.offsetWidth/1.5 + 'px';
+    this.eventsTemp.nativeElement.style.height = this.eventsTemp.nativeElement.offsetWidth/1.5 + 'px';
+    this.thingsToKnow.nativeElement.style.height = this.thingsToKnow.nativeElement.offsetWidth + 'px';
     // this.memoriesSS.nativeElement.style.height = this.memoriesSS.nativeElement.offsetWidth/1.5 + 'px';
     
     this.content.nativeElement.style.minWidth = (this.hero.nativeElement.offsetWidth -5) + 'px';
     const rect = this.content.nativeElement.getBoundingClientRect();
 
-    this.isparrallaxVisible = rect.top < window.innerHeight && rect.bottom >= 200;
+    this.isparrallaxVisible = rect.top < window.innerHeight && rect.bottom >= 350;
     if (this.isparrallaxVisible) {
       this.setbgPositionAndScroll();
     }
@@ -105,13 +109,15 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
 
   setbgPositionAndScroll() {
     const scroll = window.scrollY;
-    const factorScx = window.innerWidth < 768 ? 0.75 : 0.5;
+    const factorScx = window.innerWidth < 768 ? 0.75 : 0.25;
     [
       document.querySelector('.root-landing-img') as HTMLElement,
       document.querySelector('.hands-together-img') as HTMLElement,
       document.querySelector('.meet-bride-img') as HTMLElement,
       document.querySelector('.meet-groom-img') as HTMLElement,
       document.querySelector('.memories-container') as HTMLElement,
+      document.querySelector('.events-container') as HTMLElement,
+      document.querySelector('.things-to-know') as HTMLElement,
     ].forEach(bg=> {
       bg.style.transform = `translateY(${Math.floor(scroll * factorScx)}px)`;
     })
@@ -178,5 +184,8 @@ handleSwipe() {
     }, 1000);
   }
 
+  onVenueClick() {
+    window.open("https://maps.app.goo.gl/jkqGjUc2i17r7ApJA")
+  }
   
 }
