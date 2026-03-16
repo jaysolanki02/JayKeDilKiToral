@@ -1,8 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
@@ -13,7 +16,7 @@ export class Hero implements AfterViewInit {
   // @ViewChild('meetTheCouple') meetTheCouple!: ElementRef;
   @ViewChild('meetTheBride') meetTheBride!: ElementRef;
   @ViewChild('meetTheGroom') meetTheGroom!: ElementRef;
-
+  isparrallaxVisible = true;
 
   bgPosition = '';
   glImg = 'images/ganesha.png';
@@ -31,29 +34,20 @@ export class Hero implements AfterViewInit {
   @HostListener('window:orientationchange')
   @HostListener('window:scroll')
   updateHeight() {
-    // let margin = window.innerHeight;
-    // let factor = window.innerHeight;
-    // if(window.innerHeight < window.innerWidth) {
-    //   factor = window.innerHeight / window.innerWidth;
-    //   margin = window.innerWidth;
-    // } else if(window.innerHeight = window.innerWidth) {
-    //   margin = window.innerHeight;
-    //   factor = 0.7;
-    // } else {
-    //   margin = window.innerHeight;
-    //   factor = window.innerWidth / window.innerHeight;
-    // }
-    // this.hero.nativeElement.style.height =  + 'px';
-    // this.handsTogether.nativeElement.style.height = margin * factor + 'px';
-    // this.content.nativeElement.style.minWidth = (margin -5) + 'px';
+
     this.hero.nativeElement.style.height = this.hero.nativeElement.offsetWidth + 'px';
     this.handsTogether.nativeElement.style.height = this.handsTogether.nativeElement.offsetWidth/1.5 + 'px';
-    // this.meetTheCouple.nativeElement.style.height = this.meetTheCouple.nativeElement.offsetWidth + 'px';
     this.meetTheBride.nativeElement.style.height = this.meetTheBride.nativeElement.offsetWidth/1.5 + 'px';
     this.meetTheGroom.nativeElement.style.height = this.meetTheGroom.nativeElement.offsetWidth/1.5 + 'px';
     
     this.content.nativeElement.style.minWidth = (this.hero.nativeElement.offsetWidth -5) + 'px';
     this.setbgPositionAndScroll();
+    const rect = this.content.nativeElement.getBoundingClientRect();
+
+    this.isparrallaxVisible =
+      rect.top < window.innerHeight &&
+      rect.bottom >= 0;
+
   }
 
   setHeartbeatToFonts() {
@@ -82,7 +76,7 @@ export class Hero implements AfterViewInit {
 
   setbgPositionAndScroll() {
     const scroll = window.scrollY;
-    const factorScx = window.innerWidth < 768 ? 0.6 : 0.5;
+    const factorScx = window.innerWidth < 768 ? 0.75 : 0.5;
     [
       document.querySelector('.root-landing-img') as HTMLElement,
       document.querySelector('.hands-together-img') as HTMLElement,

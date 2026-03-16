@@ -8,6 +8,14 @@
 
     height: 100%;
     width: 100%;
+    .mbg{
+        height: 100%;
+        text-align: center;
+        align-content: center;
+        color: white;
+        transition: all 1s ease;
+        font-size: 5rem;
+    }
 }
 
 .hands-together-img{
@@ -44,6 +52,10 @@
 
     height: 100%;
     width: 100%;
+    .bit {
+        text-align: right;
+        padding: 10% 4%;
+    }
 }
 .meet-groom-img{
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url("../../../../public/images/personal/YPS01060.JPG");
@@ -55,6 +67,9 @@
 
     height: 100%;
     width: 100%;
+    .git{
+        padding: 4%;
+    }
 }
 
 .content {
@@ -93,7 +108,7 @@
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .nm {

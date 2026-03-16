@@ -1,13 +1,6 @@
 <app-hero></app-hero>
 
-<h2>
-  <div>
-  {{countdown?.days}} days 
-  {{countdown?.hours | number:'2.0-0'}} :
-  {{countdown?.minutes | number:'2.0-0'}} :
-  {{countdown?.seconds | number:'2.0-0'}}
-</div>
- 💍</h2>
+
 
 <app-bride></app-bride>
 <app-groom></app-groom>
@@ -16,3 +9,11 @@
 <app-gallery></app-gallery>
 <app-venue></app-venue>
 <app-rsvp></app-rsvp>
+<h2>
+  <div>
+  <span *ngIf="countdown?.days">{{countdown?.days}} days</span> 
+  {{countdown?.hours | number:'2.0-0'}} :
+  {{countdown?.minutes | number:'2.0-0'}} :
+  {{countdown?.seconds | number:'2.0-0'}}
+</div>
+ 💍</h2>

@@ -8,12 +8,13 @@ import { Events } from './pages/events/events';
 import { Gallery } from './pages/gallery/gallery';
 import { Venue } from './pages/venue/venue';
 import { Rsvp } from './pages/rsvp/rsvp';
-import { DecimalPipe } from '@angular/common';
+import { CommonModule, DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   imports: [
     DecimalPipe,
+    CommonModule,
     Hero,
     Bride,
     Groom,
