@@ -1,0 +1,190 @@
+.root-landing-img{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00815.JPG");
+    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+}
+
+.hands-together-img{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00886.JPG");
+    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+}
+
+.meet-couple-img{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00943.JPG");
+    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+}
+
+.meet-bride-img{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS01040.JPG"), green;
+    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
+
+    background-size: contain;
+    background-position: inherit;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+}
+.meet-groom-img{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS01060.JPG"), green;
+    // background-image: url("../../../../public/images/personal/YPS00815.JPG");
+
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 5%;
+    color: ivory;
+    text-align: center;
+}
+.wed-title {
+    font-family: 'Tangerine', cursive;
+    
+    font-size: 5rem;
+    // opacity: 0;
+    font-weight: 900;
+    // min-height: 300px;
+    // transform: translateY(60px);
+    transition: all 0.8s ease;
+}
+
+.gtl-po {
+    width: 100%;
+    margin-top: 100vh;
+    text-align: center;
+    color: white;
+    transition: all 1s ease;
+
+    .ost {
+    font-size: 2.25rem;
+    font-weight: bold;
+    /* text-align: center; */
+}
+
+    .g-l{
+        height: 100px;
+        margin-bottom: 100px;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .nm {
+        font-family: "Tangerine", cursive;
+        font-size: 10rem;
+    }
+
+}
+
+// .section-1 {
+//   mask-image: linear-gradient(
+//     to bottom,
+//     black 70%,
+//     transparent
+//   );
+
+//   -webkit-mask-image: linear-gradient(
+//     to bottom,
+//     black 70%,
+//     transparent
+//   );
+// }
+
+// .section-2 {
+//   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+// }
+
+// .section-2 {
+//   margin-top: -120px;
+//   position: relative;
+//   z-index: 2;
+// }
+
+// .section-2::before {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+//   background: rgba(0,0,0,0.3);
+// }
+
+.down-fade::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,1)
+  );
+}
+.up-fade::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0),
+    rgba(0,0,0,1)
+  );
+}
+
+.photo-frame-up::before,
+.photo-frame-down::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  border: 4px solid #c9a36b;
+}
+
+.photo-frame-up::before {
+  top: 0;
+  left: 0;
+
+  border-right: none;
+  border-bottom: none;
+}
+
+.photo-frame-down::after {
+  bottom: 0;
+  right: 0;
+
+  border-left: none;
+  border-top: none;
+  justify-self: self-end;
+}
