@@ -28,6 +28,11 @@
                 "glob": "**/*",
                 "input": "public/images",
                 "output": "images"
+              },
+              {
+                "glob": "**/*",
+                "input": "public/svg",
+                "output": "svg"
               }
             ],
             "styles": [
