@@ -56,7 +56,7 @@
     <div class="photo-frame-up photo-frame-down"></div>
 
     <div class="msg">
-        <h1>A Message from Jay & Toral</h1>
+        <h1 class="bold">A Message from Jay & Toral</h1>
         <h2>
             It began with two families, a simple introduction, and a little curiosity. Somewhere between conversations and laughter, we found something beautiful — a bond that felt just right.
         </h2>
@@ -66,7 +66,7 @@
         <h2>
             With love,
         </h2>
-        <h1>
+        <h1 class="bold">
             Jay & Toral 
         </h1>
         <div>✨</div>
@@ -96,15 +96,15 @@
 
     <div class="fade-in" [ngClass]="{'show': !isparrallaxVisible}">
         
-        <h1>
+        <h1 class="bold">
             Looking forward to see you
         </h1>
         <h1>
             on Friday, 1st May 2026
         </h1>
-        <h2> ~~~ Venue ~~~ </h2>
+        <h2 class="bold"> ~~~ Venue ~~~ </h2>
         <h3>Damodar Wadi, Ashok Chakravarti Road, Ashok Nagar, Kandivali (E), Mumbai - 101.</h3>
-        <h2> ~~~ Timing ~~~ </h2>
+        <h2 class="bold"> ~~~ Timing ~~~ </h2>
         <h3>10:00 am onwards</h3>
         
         <h3><a (click)="onVenueClick()" >📍Click Here for Direction</a></h3>
@@ -117,7 +117,7 @@
     <div class="photo-frame-up photo-frame-down"></div>
 
     <div class="txt">
-        <h1>
+        <h1 class="bold">
             Things to know
         </h1>
         <h3>
@@ -126,7 +126,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 hashtag">
-                    <h1>Hashtag</h1>
+                    <h1 class="bold">Hashtag</h1>
                     <div class="insta-logo"></div>
                     <h3>While posting photos on social media please use the hashtag - <h1>#JayKeDilKiToral</h1></h3>
                 </div>
@@ -136,7 +136,7 @@
             <div class="row">
                 <div class="col-sm-8 offset-sm-2">
                     <div class="countdown-t">
-                        <h1>The countdown begins</h1>
+                        <h1 class="bold">The countdown begins</h1>
                         <div>
                             <span *ngIf="countdown?.days">{{countdown?.days}} days, </span> 
                             {{countdown?.hours | number:'2.0-0'}} :

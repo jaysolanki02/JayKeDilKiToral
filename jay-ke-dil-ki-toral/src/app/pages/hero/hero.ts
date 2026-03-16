@@ -71,8 +71,8 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
 
     this.hero.nativeElement.style.height = this.hero.nativeElement.offsetWidth + 'px';
     this.handsTogether.nativeElement.style.height = this.handsTogether.nativeElement.offsetWidth/1.5 + 'px';
-    this.meetTheBride.nativeElement.style.height = this.meetTheBride.nativeElement.offsetWidth/1.5 + 'px';
-    this.meetTheGroom.nativeElement.style.height = this.meetTheGroom.nativeElement.offsetWidth/1.5 + 'px';
+    this.meetTheBride.nativeElement.style.height = this.meetTheBride.nativeElement.offsetWidth/1.4 + 'px';
+    this.meetTheGroom.nativeElement.style.height = this.meetTheGroom.nativeElement.offsetWidth/1.4 + 'px';
     this.eventsTemp.nativeElement.style.height = this.eventsTemp.nativeElement.offsetWidth/1.5 + 'px';
     // this.thingsToKnow.nativeElement.style.height = this.thingsToKnow.nativeElement.offsetWidth + 'px';
     // this.memoriesSS.nativeElement.style.height = this.memoriesSS.nativeElement.offsetWidth/1.5 + 'px';

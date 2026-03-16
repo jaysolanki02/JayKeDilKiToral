@@ -87,6 +87,10 @@ a {
   opacity: 0;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 @media screen and (min-width: 480px) {
   /* CSS for large mobiles and up */
     html {
