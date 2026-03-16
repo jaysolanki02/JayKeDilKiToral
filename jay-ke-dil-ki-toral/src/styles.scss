@@ -31,6 +31,25 @@ html {
   font-size: clamp(6px, 1vw + 0.5rem, 10px);
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+
+.fade-out {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.fade-out.hide {
+  opacity: 0;
+}
+
 @media (min-width: 480px) {
   /* CSS for large mobiles and up */
     html {

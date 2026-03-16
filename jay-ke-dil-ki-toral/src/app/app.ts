@@ -8,12 +8,11 @@ import { Events } from './pages/events/events';
 import { Gallery } from './pages/gallery/gallery';
 import { Venue } from './pages/venue/venue';
 import { Rsvp } from './pages/rsvp/rsvp';
-import { CommonModule, DecimalPipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   imports: [
-    DecimalPipe,
     CommonModule,
     Hero,
     Bride,
@@ -30,12 +29,7 @@ import { CommonModule, DecimalPipe } from '@angular/common';
 export class App {
   protected readonly title = signal('jay-ke-dil-ki-toral');
 
-  weddingDate = new Date('2026-05-01T00:00:00+05:30');
-  countdown: any;
 
-  ngOnInit() {
-    this.setCountdown();
-  }
 
   scroll(id: string) {
     document.getElementById(id)?.scrollIntoView({
@@ -43,20 +37,5 @@ export class App {
     });
   }
 
-  setCountdown() {
-    setInterval(() => {
-      const diff = this.weddingDate.getTime() - new Date().getTime();
 
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-      this.countdown = {
-        days,
-        hours,
-        minutes,
-        seconds
-      } 
-    }, 1000);
-  }
 }

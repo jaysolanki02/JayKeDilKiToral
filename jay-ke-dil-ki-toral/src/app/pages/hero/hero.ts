@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -9,23 +9,51 @@ import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
-export class Hero implements AfterViewInit {
+export class Hero implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('hero') hero!: ElementRef;
   @ViewChild('content') content!: ElementRef;
   @ViewChild('handsTogether') handsTogether!: ElementRef;
   // @ViewChild('meetTheCouple') meetTheCouple!: ElementRef;
   @ViewChild('meetTheBride') meetTheBride!: ElementRef;
   @ViewChild('meetTheGroom') meetTheGroom!: ElementRef;
+  @ViewChild('memoriesSS') memoriesSS!: ElementRef;
+
   isparrallaxVisible = true;
+
+  images = [
+    'images/personal/YPS01060.JPG',
+    'images/personal/YPS01040.JPG',
+    'images/personal/YPS00943.JPG',
+    'images/personal/YPS00886.JPG',
+  ];
+  currentIndex = 0;
+  ssInterval: any;
+  wedTitleInterval: any;
+  touchStartX = 0;
+  touchEndX = 0;
 
   bgPosition = '';
   glImg = 'images/ganesha.png';
+  weddingDate = new Date('2026-05-01T00:00:00+05:30');
+  countdown: any;
+
+ 
+
+  ngOnInit() {
+    this.setCountdown();
+  }
+  
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.updateHeight(); 
     });
     this.setHeartbeatToFonts();
+    this.startSlideshow();
+  }
 
+  ngOnDestroy() {
+    clearInterval(this.wedTitleInterval);
+    clearInterval(this.ssInterval);
   }
 
   @HostListener('window:load')
@@ -39,18 +67,19 @@ export class Hero implements AfterViewInit {
     this.handsTogether.nativeElement.style.height = this.handsTogether.nativeElement.offsetWidth/1.5 + 'px';
     this.meetTheBride.nativeElement.style.height = this.meetTheBride.nativeElement.offsetWidth/1.5 + 'px';
     this.meetTheGroom.nativeElement.style.height = this.meetTheGroom.nativeElement.offsetWidth/1.5 + 'px';
+    // this.memoriesSS.nativeElement.style.height = this.memoriesSS.nativeElement.offsetWidth/1.5 + 'px';
     
     this.content.nativeElement.style.minWidth = (this.hero.nativeElement.offsetWidth -5) + 'px';
     const rect = this.content.nativeElement.getBoundingClientRect();
 
-    this.isparrallaxVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+    this.isparrallaxVisible = rect.top < window.innerHeight && rect.bottom >= 200;
     if (this.isparrallaxVisible) {
       this.setbgPositionAndScroll();
     }
   }
 
   setHeartbeatToFonts() {
-    setInterval(() => {
+    this.wedTitleInterval = setInterval(() => {
     const wedTitle = document.querySelector('.wed-title') as HTMLElement;
     let margin = window.innerHeight;
     let factor = window.innerHeight;
@@ -81,6 +110,7 @@ export class Hero implements AfterViewInit {
       document.querySelector('.hands-together-img') as HTMLElement,
       document.querySelector('.meet-bride-img') as HTMLElement,
       document.querySelector('.meet-groom-img') as HTMLElement,
+      document.querySelector('.memories-container') as HTMLElement,
     ].forEach(bg=> {
       bg.style.transform = `translateY(${Math.floor(scroll * factorScx)}px)`;
     })
@@ -91,5 +121,61 @@ export class Hero implements AfterViewInit {
 
     // console.log(this.hero.nativeElement.getBoundingClientRect());
   }
+
+  startSlideshow() {
+    this.ssInterval = setInterval(() => {
+      this.currentIndex =
+        (this.currentIndex + 1) % this.images.length;
+    }, 5000);
+  }
+
+  next() {
+    this.currentIndex =
+      (this.currentIndex + 1) % this.images.length;
+  }
+
+  prev() {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.images.length) % this.images.length;
+  }
+
+onTouchStart(event: TouchEvent) {
+  this.touchStartX = event.changedTouches[0].screenX;
+}
+
+onTouchEnd(event: TouchEvent) {
+  this.touchEndX = event.changedTouches[0].screenX;
+  this.handleSwipe();
+}
+
+handleSwipe() {
+  const swipeDistance = this.touchStartX - this.touchEndX;
+
+  if (swipeDistance > 50) {
+    this.next();
+  }
+
+  if (swipeDistance < -50) {
+    this.prev();
+  }
+}
+
+  setCountdown() {
+    setInterval(() => {
+      const diff = this.weddingDate.getTime() - new Date().getTime();
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      this.countdown = {
+        days,
+        hours,
+        minutes,
+        seconds
+      } 
+    }, 1000);
+  }
+
   
 }
