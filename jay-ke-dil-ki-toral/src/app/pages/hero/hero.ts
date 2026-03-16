@@ -77,7 +77,7 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
     this.content.nativeElement.style.minWidth = (this.hero.nativeElement.offsetWidth -5) + 'px';
     const rect = this.content.nativeElement.getBoundingClientRect();
 
-    this.isparrallaxVisible = rect.top < window.innerHeight && rect.bottom >= 350;
+    this.isparrallaxVisible = rect.top < window.innerHeight && rect.bottom >= 100;
     if (this.isparrallaxVisible) {
       this.setbgPositionAndScroll();
     }
