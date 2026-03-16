@@ -1,5 +1,5 @@
 .root-landing-img{
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00815.JPG");
+    background: url("../../../../public/images/personal/YPS00815.JPG");
     // background-image: url("../../../../public/images/personal/YPS00815.JPG");
 
     background-size: cover;
@@ -19,7 +19,7 @@
 }
 
 .hands-together-img{
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../../../public/images/personal/YPS00886.JPG");
+    background: url("../../../../public/images/personal/YPS00886.JPG");
     // background-image: url("../../../../public/images/personal/YPS00815.JPG");
 
     background-size: cover;
@@ -40,6 +40,7 @@
 
     height: 100%;
     width: 100%;
+    border-radius: 25%;
 }
 
 .meet-bride-img{
@@ -121,10 +122,13 @@
 }
 
 .content {
-    position: absolute;
-    top: 5%;
-    color: ivory;
-    text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  border-radius: 25%;
+  padding: 4%;
+  position: absolute;
+  top: 5%;
+  color: ivory;
+  text-align: center;
 }
 .wed-title {
     font-family: 'Tangerine', cursive;
