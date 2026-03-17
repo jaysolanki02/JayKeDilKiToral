@@ -33,6 +33,11 @@
                 "glob": "**/*",
                 "input": "public/svg",
                 "output": "svg"
+              },
+              {
+                "glob": "**/*",
+                "input": "public/audio",
+                "output": "audio"
               }
             ],
             "styles": [

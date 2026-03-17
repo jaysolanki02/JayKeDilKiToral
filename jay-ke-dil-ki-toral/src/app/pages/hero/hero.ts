@@ -73,9 +73,6 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
     this.handsTogether.nativeElement.style.height = this.handsTogether.nativeElement.offsetWidth/1.5 + 'px';
     this.meetTheBride.nativeElement.style.height = this.meetTheBride.nativeElement.offsetWidth/1.4 + 'px';
     this.meetTheGroom.nativeElement.style.height = this.meetTheGroom.nativeElement.offsetWidth/1.4 + 'px';
-    this.eventsTemp.nativeElement.style.height = this.eventsTemp.nativeElement.offsetWidth/1.5 + 'px';
-    // this.thingsToKnow.nativeElement.style.height = this.thingsToKnow.nativeElement.offsetWidth + 'px';
-    // this.memoriesSS.nativeElement.style.height = this.memoriesSS.nativeElement.offsetWidth/1.5 + 'px';
     
     this.content.nativeElement.style.minWidth = (this.hero.nativeElement.offsetWidth -1) + 'px';
     const rect = this.content.nativeElement.getBoundingClientRect();
@@ -120,7 +117,6 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
       document.querySelector('.meet-groom-img') as HTMLElement,
       document.querySelector('.memories-container') as HTMLElement,
       document.querySelector('.events-container') as HTMLElement,
-      document.querySelector('.things-to-know') as HTMLElement,
     ].forEach(bg=> {
       bg.style.transform = `translateY(${Math.floor(scroll * factorScx)}px)`;
     })

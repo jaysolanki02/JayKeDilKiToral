@@ -60,7 +60,7 @@
       padding: 4% 2% 0 0;;
       float: right;
       width: 50%;
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 3vw, 5rem);
       font-weight: 600;
     }
 }
@@ -78,7 +78,7 @@
     .git{
       padding: 4% 0 0 4%;
       width: 50%;
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 3vw, 5rem);
       font-weight: 600;
     }
 }
@@ -91,6 +91,26 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 15% 0;
+  
+  .hashtag {
+    justify-items: center;
+  }
+  .insta-logo {
+    width: 120px;
+    height: 120px;
+    margin: 10%;
+    background-image: url("../../../../public/svg/insta-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+  .txt {
+    padding: 7%;
+    border-radius: 30% 0;
+    text-align: center;
+  }
 }
 
 .things-to-know {
@@ -302,7 +322,7 @@
   opacity: 0;
   transition: opacity 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
    border-radius: 20px;
-  background: #fff;
+  background: linear-gradient(315deg, #d1ccc6, transparent);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* modern shadow */
   // box-shadow: 8px 8px 16px rgba(0,0,0,0.2),
   //             -8px -8px 16px rgba(255,255,255,0.7);
@@ -361,9 +381,8 @@
 }
 @media screen and (max-width: 768px) {
   .meet-bride-img, .meet-groom-img{
-  .bit, .git {
-    font-size: 1.1rem;
-  }
-
+    .bit, .git {
+      font-size: clamp(1.1rem, 3vw, 3rem);
+    }
   }
 }

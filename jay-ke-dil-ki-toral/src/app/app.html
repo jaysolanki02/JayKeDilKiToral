@@ -1,2 +1,10 @@
 <app-hero></app-hero>
+<audio #bgMusic loop>
+  <source [src]="audioSrc" type="audio/mpeg">
+</audio>
 
+<button class="audio-btn" (click)="toggleMusic()">
+  <span class="material-icons">
+    {{ isPlaying ? 'pause' : 'play_arrow' }}
+  </span>
+</button>

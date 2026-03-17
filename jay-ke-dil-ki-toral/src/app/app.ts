@@ -1,5 +1,4 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { Hero } from './pages/hero/hero';
 
 @Component({
@@ -12,14 +11,21 @@ import { Hero } from './pages/hero/hero';
 })
 export class App {
   protected readonly title = signal('jay-ke-dil-ki-toral');
+  audioSrc = 'audio/Wedding_Piano_Music.mp3';
+  isPlaying = false;
 
 
+  @ViewChild('bgMusic') bgMusic!: ElementRef<HTMLAudioElement>;
 
-  scroll(id: string) {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  toggleMusic() {
+    const audio = this.bgMusic.nativeElement;
+
+    if (this.isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+
+    this.isPlaying = !this.isPlaying;
   }
-
-
 }
