@@ -5,6 +5,7 @@ body {
     font-family: "Cormorant Upright", serif;
     color: #734836;
     background-image: url('../public/images/pint/download-7.jpg');
+    overscroll-behavior: none;
 }
 
 .italianno-regular {
@@ -69,6 +70,7 @@ body {
 
 html {
   font-size: clamp(6px, 1vw + 0.5rem, 10px);
+  scroll-behavior: smooth;
 }
 
 a {
