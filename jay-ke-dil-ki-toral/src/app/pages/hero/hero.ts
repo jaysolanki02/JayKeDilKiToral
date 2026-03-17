@@ -46,6 +46,7 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
  
 
   ngOnInit() {
+    this.weddingDate.setHours(this.weddingDate.getHours() + 10);
     this.setCountdown();
   }
 
@@ -168,8 +169,8 @@ handleSwipe() {
 
   setCountdown() {
     setInterval(() => {
-      const diff = this.weddingDate.getTime() - new Date().getTime();
-
+      let diff = this.weddingDate.getTime() - new Date().getTime();
+      diff = diff < 0 ? 0 : diff;
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
