@@ -208,10 +208,12 @@
   }
 
   .nm {
-      font-family: "Tangerine", cursive;
-      font-size: 7rem;
+    font-family: "Tangerine", cursive;
+    font-size: 7rem;
+    text-align: left;
   }
   .t {
+    text-align: right;
     padding-right: 4%;
   }
 
@@ -380,5 +382,17 @@
     .bit, .git {
       font-size: clamp(1.1rem, 3vw, 3rem);
     }
+  }
+}
+
+.tj-g-lc {
+  height: 100%;
+  width: 100%;
+  justify-items: center;
+  padding-top: 1%;
+  .tj-g-l {
+    height: 24%;
+    width: 24%;
+    transform: rotate(2deg);
   }
 }

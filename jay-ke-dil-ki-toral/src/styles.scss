@@ -58,6 +58,14 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+.tj-g-l {
+    width: 100%;
+    height: 100%;
+    background-image: url("../public/svg/T&J-logo-gold.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 html {
   font-size: clamp(6px, 1vw + 0.5rem, 10px);
@@ -71,7 +79,7 @@ a {
 
 .fade-in {
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.5s ease;
 }
 
 .fade-in.show {
@@ -81,7 +89,7 @@ a {
 
 .fade-out {
   opacity: 1;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.5s ease;
 }
 
 .fade-out.hide {

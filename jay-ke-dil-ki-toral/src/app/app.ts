@@ -1,4 +1,4 @@
-import { Component, ElementRef, signal, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, signal, ViewChild } from '@angular/core';
 import { Hero } from './pages/hero/hero';
 
 @Component({
@@ -9,14 +9,20 @@ import { Hero } from './pages/hero/hero';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
+export class App implements OnInit {
   protected readonly title = signal('jay-ke-dil-ki-toral');
   audioSrc = 'audio/Wedding_Piano_Music.mp3';
   isPlaying = false;
-
+  isLoaded = false;
 
   @ViewChild('bgMusic') bgMusic!: ElementRef<HTMLAudioElement>;
 
+  ngOnInit(): void {
+    this.isLoaded = false;
+    setTimeout(() => {
+     this.isLoaded = true; 
+    });
+  }
   toggleMusic() {
     const audio = this.bgMusic.nativeElement;
 

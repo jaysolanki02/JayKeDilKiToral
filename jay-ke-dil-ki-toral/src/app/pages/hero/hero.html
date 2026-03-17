@@ -1,5 +1,8 @@
-<div #handsTogether class=" hands-together-img" >
+<div #handsTogether class="hands-together-img" >
     <div class="photo-frame-up photo-frame-down"></div>
+    <div class="tj-g-lc">
+        <div class="tj-g-l"></div>
+    </div>
 </div>
 
 
@@ -13,7 +16,7 @@
 </div>
 <!-- <div #meetTheCouple class="meet-couple-img  " ></div> -->
 <div #meetTheBride class="meet-bride-img" >
-    <div class="bit">
+    <div class="bit fade-in" [class.show]="!isparrallaxVisible" >
         <div>
             Toral is a creative soul and a passionate interior designer who finds beauty in the smallest details of life. 
         </div>
@@ -32,7 +35,7 @@
 
 </div>
 <div #meetTheGroom class="meet-groom-img " >
-    <div class="git">
+    <div class="git fade-in" [class.show]="!isparrallaxVisible">
         <!-- <h1 >tareef ke 2 shabd</h1> -->
          <div>
             Jay is a calm and grounded soul who brings a sense of warmth wherever he goes.

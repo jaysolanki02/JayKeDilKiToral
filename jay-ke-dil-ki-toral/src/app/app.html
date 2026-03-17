@@ -1,10 +1,13 @@
-<app-hero></app-hero>
-<audio #bgMusic loop>
-  <source [src]="audioSrc" type="audio/mpeg">
-</audio>
+<div class="fade-in" [class.show]="isLoaded">
+  <app-hero></app-hero>
+  <audio #bgMusic loop>
+    <source [src]="audioSrc" type="audio/mpeg">
+  </audio>
 
-<button class="audio-btn" (click)="toggleMusic()">
-  <span class="material-icons">
-    {{ isPlaying ? 'pause' : 'play_arrow' }}
-  </span>
-</button>
+  <button class="audio-btn" (click)="toggleMusic()">
+    <span class="material-icons">
+      {{ isPlaying ? 'pause' : 'play_arrow' }}
+    </span>
+  </button>
+
+</div>
