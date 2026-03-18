@@ -17,16 +17,16 @@
 <!-- <div #meetTheCouple class="meet-couple-img  " ></div> -->
 <div #meetTheBride class="meet-bride-img" >
     <div class="bit fade-in" [class.show]="!isparrallaxVisible" >
-        <div>
+        <div class="my-1">
             Toral is a creative soul and a passionate interior designer who finds beauty in the smallest details of life. 
         </div>
-        <div>
+        <div class="my-1">
             A simple girl with a warm smile, she carries a natural charm wherever she goes. 
         </div>
-        <div>
+        <div class="my-1">
             Chirpy and happy-go-lucky, she believes in living life with positivity and gratitude towards the universe. 
         </div>
-        <div>
+        <div class="my-1">
             With her giving nature and deep love for family, she brings warmth, understanding, and light to everyone around her. ✨            
         </div>
     </div>
@@ -37,16 +37,16 @@
 <div #meetTheGroom class="meet-groom-img " >
     <div class="git fade-in" [class.show]="!isparrallaxVisible">
         <!-- <h1 >tareef ke 2 shabd</h1> -->
-         <div>
+         <div class="my-1">
             Jay is a calm and grounded soul who brings a sense of warmth wherever he goes.
          </div>
-         <div>
+         <div class="my-1">
             A talented coding engineer by profession, he is known for his sharp mind and thoughtful approach to life.
          </div>
-         <div>
+         <div class="my-1">
             Deeply family-oriented and blessed with a giving nature, Jay believes in standing by the people he loves. 
          </div>
-         <div>
+         <div class="my-1">
             With his handsome charm and kind heart, he truly is someone who makes life brighter for those around him. ✨
          </div>
         <!-- <h4 >Lorem Ipsum</h4> -->
@@ -60,19 +60,19 @@
 
     <div class="msg">
         <h1 class="bold">A Message from Jay & Toral</h1>
-        <h2>
+        <h2 class="my-3">
             It began with two families, a simple introduction, and a little curiosity. Somewhere between conversations and laughter, we found something beautiful — a bond that felt just right.
         </h2>
-        <h2>
+        <h2 class="my-3">
             With love, blessings, and a little bit of destiny, we are beginning our forever together. We would be delighted to celebrate this special moment with you.
         </h2>
-        <h2>
+        <h2 class="my-1">
             With love,
         </h2>
-        <h1 class="bold">
+        <h1 class="bold my-1">
             Jay & Toral 
         </h1>
-        <div>✨</div>
+        <div class="my-1">✨</div>
     </div>
     <div class="slideshow" 
     (touchstart)="onTouchStart($event)"
@@ -100,49 +100,62 @@
 
     <div class="fade-in" [ngClass]="{'show': !isparrallaxVisible}">
         
-        <h1 class="bold">
+        <h1 class="my-3" >
             Looking forward to see you
         </h1>
-        <h1>
-            on Friday, 1st May 2026
+        <h1 class="my-1">
+            on <span class="bold">Friday, 1st May 2026</span>
         </h1>
-        <h2 class="bold"> ~~~ Venue ~~~ </h2>
-        <h2>Damodar Wadi, Ashok Chakravarti Road, Ashok Nagar, Kandivali (E), Mumbai - 101.</h2>
-        <h2 class="bold"> ~~~ Timing ~~~ </h2>
-        <h2>10:00 am onwards</h2>
+        <h2 class="my-3"> ~~~ Venue ~~~ </h2>
+        <h2 class="my-1 bold">
+            <div>Damodar Wadi,</div>
+            <div>
+                Ashok Chakravarti Road, Ashok Nagar, Kandivali (E), Mumbai - 101.
+            </div>
+        </h2>
+        <h2 class="my-3"> ~~~ Timing ~~~ </h2>
+        <h2 class="my-3 bold">10:00 am onwards</h2>
         
-        <h3><a class="u" (click)="onVenueClick()" >📍Click Here for Direction</a></h3>
+        <h3><a class="u my-1" (click)="onVenueClick()" >📍Click Here for Direction</a></h3>
 
         
     </div>
     <div class="txt">
-        <h1 class="bold">
+        <h1 class="bold my-3">
             Things to know
         </h1>
-        <h3>
+        <h3 class="my-3">
             To help you feel at ease and enjoy every moment of the celebrations, we’ve gathered a few thoughtful details we’d love for you to know before the big day.
         </h3>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 hashtag">
-                    <h1 class="bold">Hashtag</h1>
-                    <div class="insta-logo"></div>
-                    <h3>While posting photos on social media please use the hashtag - <h1 class="bold"><a class="u" href="https://www.instagram.com/explore/tags/JayKeDilKiToral/" target="_blank">#JayKeDilKiToral</a></h1></h3>
+                    <h1 class="bold mb-3">Hashtag</h1>
+                    <div class="insta-logo my-3"></div>
+                    <h3>
+                        <div class="my-3">
+                            While posting photos on social media please use the hashtag -
+                        </div>
+                        <h1 class="bold my-3"><a class="u" href="https://www.instagram.com/explore/tags/JayKeDilKiToral/" target="_blank">#JayKeDilKiToral</a></h1></h3>
                 </div>
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4"></div>
             </div>
             <div class="row">
                 <div class="col-sm-8 offset-sm-2">
                     <div class="countdown-t">
-                        <h1 class="bold">The countdown begins</h1>
-                        <div>
+                        <h1 class="bold my-3">The countdown begins</h1>
+                        <div class="my-3">
                             <span *ngIf="countdown?.days">{{countdown?.days}} days, </span> 
-                            {{countdown?.hours | number:'2.0-0'}} :
-                            {{countdown?.minutes | number:'2.0-0'}} :
-                            {{countdown?.seconds | number:'2.0-0'}}
+                            <span>
+                                {{countdown?.hours | number:'2.0-0'}} :
+                            </span>
+                            <span>
+                                {{countdown?.minutes | number:'2.0-0'}} :
+                            </span>
+                            <span>
+                                {{countdown?.seconds | number:'2.0-0'}}
+                            </span>
                         </div>
-                        <h3>
+                        <h3 class="my-3">
                             Our families are excited that you are able to join us in celebrating what we hope will be one of the happiest days of our lives!
                         </h3>
                     </div>
@@ -182,7 +195,6 @@
                         </div>
                         <div>
                             Mrs. Mamta Harshad Makani
-
                         </div>
                     </div>
                 </div>
