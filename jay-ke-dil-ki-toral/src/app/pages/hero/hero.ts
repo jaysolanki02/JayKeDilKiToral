@@ -27,6 +27,7 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
     'images/personal/t-j-1.jpeg',
     'images/personal/traditional.jpeg',
     'images/personal/t-j-3.jpeg',
+    'images/personal/download-8.jpeg',
     'images/personal/t-j-2.jpeg',
     'images/personal/tdp.jpeg',
     'images/personal/11-11.jpeg',
