@@ -4,6 +4,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs';
+import { Constants } from './core/constants';
 
 @Component({
   selector: 'app-root',
@@ -20,8 +21,6 @@ export class App implements OnInit {
   audioSrc = 'audio/Wedding_Piano_Music.mp3';
   isPlaying = false;
   isLoaded = false;
-
-  allowedLangs = ['en', 'hin', 'guj'];
 
   @ViewChild('bgMusic') bgMusic!: ElementRef<HTMLAudioElement>;
 
@@ -43,12 +42,10 @@ export class App implements OnInit {
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
         const url = this.router.url; // e.g. /en
-
         const lang = url.split('/')[1] || 'en';
-
-        console.log('Detected lang from URL:', lang);
-
-        this.translate.use(lang);
+        this.translate.use(
+          Constants.allowedLangs.includes(lang) ? lang : 'en'
+        );
       });
   }
   switchLang(lang: string) {

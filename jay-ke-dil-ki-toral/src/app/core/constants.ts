@@ -41,4 +41,6 @@ export class Constants {
     hashtagValue: 'hashtagValue',
     ourFamiliesAreExcitedTo: 'ourFamiliesAreExcitedTo'
 };
+  public static readonly allowedLangs = ['en', 'hin', 'guj'];
+
 }
