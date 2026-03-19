@@ -1,10 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Constants } from '../../core/constants';
 
 @Component({
   selector: 'app-hero',
   imports: [
-    CommonModule
+    CommonModule,
+    TranslateModule 
   ],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
@@ -42,8 +45,11 @@ export class Hero implements AfterViewInit, OnInit, OnDestroy {
   glImg = 'images/ganesha.png';
   weddingDate = new Date('2026-05-01T00:00:00+05:30');
   countdown: any;
+  i18nLabels = Constants.i18nLabel;
 
- 
+  constructor(
+    private translate: TranslateService
+  ) {}
 
   ngOnInit() {
     this.weddingDate.setHours(this.weddingDate.getHours() + 10);

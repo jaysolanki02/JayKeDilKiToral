@@ -9,25 +9,32 @@
 <div #hero class="hero root-landing-img  " >
     <div class="photo-frame-up photo-frame-down"></div>
     <div class="mbg fade-in" [ngClass]="{'show': !isparrallaxVisible}">
-        <div>Meet</div>
-        <div>the</div>
-        <div>Bride & Groom</div>
+        <div>
+            <span>{{ i18nLabels.meet | translate }}</span>
+        </div>
+        <div>
+            <span>{{ i18nLabels.the | translate }}</span>
+        </div>
+        <div>
+            <span>{{ i18nLabels.brideAndGroom | translate }}</span>
+
+        </div>
     </div>
 </div>
 <!-- <div #meetTheCouple class="meet-couple-img  " ></div> -->
 <div #meetTheBride class="meet-bride-img" >
     <div class="bit fade-in" [class.show]="!isparrallaxVisible" >
         <div class="my-1">
-            Toral is a creative soul and a passionate interior designer who finds beauty in the smallest details of life. 
+            <span>{{ i18nLabels.toralIsCreative | translate }}</span>
         </div>
         <div class="my-1">
-            A simple girl with a warm smile, she carries a natural charm wherever she goes. 
+            <span>{{ i18nLabels.aSimpleGirl | translate }}</span>
         </div>
         <div class="my-1">
-            Chirpy and happy-go-lucky, she believes in living life with positivity and gratitude towards the universe. 
+            <span>{{ i18nLabels.chirpyHappyGoLucky | translate }}</span>
         </div>
         <div class="my-1">
-            With her giving nature and deep love for family, she brings warmth, understanding, and light to everyone around her. ✨            
+            <span>{{ i18nLabels.withHerNature | translate }}</span>
         </div>
     </div>
 
@@ -38,16 +45,16 @@
     <div class="git fade-in" [class.show]="!isparrallaxVisible">
         <!-- <h1 >tareef ke 2 shabd</h1> -->
          <div class="my-1">
-            Jay is a calm and grounded soul who brings a sense of warmth wherever he goes.
+            <span>{{ i18nLabels.jayIsCalm | translate }}</span>
          </div>
          <div class="my-1">
-            A talented coding engineer by profession, he is known for his sharp mind and thoughtful approach to life.
+            <span>{{ i18nLabels.talentedCoding | translate }}</span>
          </div>
          <div class="my-1">
-            Deeply family-oriented and blessed with a giving nature, Jay believes in standing by the people he loves. 
+            <span>{{ i18nLabels.deeplyFamilyOriented | translate }}</span>
          </div>
          <div class="my-1">
-            With his handsome charm and kind heart, he truly is someone who makes life brighter for those around him. ✨
+            <span>{{ i18nLabels.handsomeCharmKindHeart | translate }}</span>
          </div>
         <!-- <h4 >Lorem Ipsum</h4> -->
 
@@ -59,18 +66,20 @@
     <div class="photo-frame-up photo-frame-down"></div>
 
     <div class="msg">
-        <h1 class="bold">A Message from Jay & Toral</h1>
+        <h1 class="bold">
+            <span>{{ i18nLabels.aMessageFrom | translate }}</span>
+        </h1>
         <h2 class="my-3">
-            It began with two families, a simple introduction, and a little curiosity. Somewhere between conversations and laughter, we found something beautiful — a bond that felt just right.
+            <span>{{ i18nLabels.beganWithTwoFamilies | translate }}</span>
         </h2>
         <h2 class="my-3">
-            With love, blessings, and a little bit of destiny, we are beginning our forever together. We would be delighted to celebrate this special moment with you.
+            <span>{{ i18nLabels.withLoveBlessings | translate }}</span>
         </h2>
         <h2 class="my-1">
-            With love,
+            <span>{{ i18nLabels.withLove | translate }}</span>
         </h2>
         <h1 class="bold my-1">
-            Jay & Toral 
+            <span>{{ i18nLabels.jayAndToral | translate }}</span>
         </h1>
         <div class="my-1">✨</div>
     </div>
@@ -101,40 +110,49 @@
     <div class="fade-in" [ngClass]="{'show': !isparrallaxVisible}">
         
         <h1 class="my-3" >
-            Looking forward to see you
+            <span>{{ i18nLabels.lookingForward | translate }}</span>
         </h1>
-        <h1 class="my-1">
-            on <span class="bold">Friday, 1st May 2026</span>
+        <h1 class="bold my-1">
+            <span>{{ i18nLabels.onFriday | translate }}</span>
         </h1>
-        <h2 class="my-3"> ~~~ Venue ~~~ </h2>
+        <h2 class="my-3"> ~~~ <span>{{ i18nLabels.venue | translate }} </span> ~~~ </h2>
         <h2 class="my-1 bold">
-            <div>Damodar Wadi,</div>
             <div>
-                Ashok Chakravarti Road, Ashok Nagar, Kandivali (E), Mumbai - 101.
+                <span>{{ i18nLabels.damodarWadi | translate }}</span>
+            </div>
+            <div>
+                <span>{{ i18nLabels.ashokNagar | translate }}</span>
             </div>
         </h2>
-        <h2 class="my-3"> ~~~ Timing ~~~ </h2>
-        <h2 class="my-3 bold">10:00 am onwards</h2>
+        <h2 class="my-3"> ~~~ <span>{{ i18nLabels.timing | translate }}</span> ~~~ </h2>
+        <h2 class="my-3 bold">
+            <span>{{ i18nLabels.timeOnwards | translate }}</span>
+        </h2>
         
-        <h3><a class="u my-1" (click)="onVenueClick()" >📍Click Here for Direction</a></h3>
+        <h3><a class="u my-1" (click)="onVenueClick()" >
+            <span>{{ i18nLabels.clickForDirections | translate }}</span>
+        </a></h3>
 
         
     </div>
     <div class="txt">
         <h1 class="bold my-3">
-            Things to know
+            <span>{{ i18nLabels.thingsToKnow | translate }}</span>
+
         </h1>
         <h3 class="my-3">
-            To help you feel at ease and enjoy every moment of the celebrations, we’ve gathered a few thoughtful details we’d love for you to know before the big day.
+            <span>{{ i18nLabels.toHelpYouAtEase | translate }}</span>
         </h3>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 hashtag">
-                    <h1 class="bold mb-3">Hashtag</h1>
+                    <h1 class="bold mb-3">
+                        <span>{{ i18nLabels.hashtag | translate }}</span>
+                    </h1>
                     <div class="insta-logo my-3"></div>
                     <h3>
                         <div class="my-3">
-                            While posting photos on social media please use the hashtag -
+                            <span>{{ i18nLabels.whilePostingPhotos | translate }}</span>
                         </div>
                         <h1 class="bold my-3"><a class="u" href="https://www.instagram.com/explore/tags/JayKeDilKiToral/" target="_blank">#JayKeDilKiToral</a></h1></h3>
                 </div>
@@ -156,7 +174,7 @@
                             </span>
                         </div>
                         <h3 class="my-3">
-                            Our families are excited that you are able to join us in celebrating what we hope will be one of the happiest days of our lives!
+                            <span>{{ i18nLabels.ourFamiliesAreExcitedTo | translate }}</span>
                         </h3>
                     </div>
                 </div>
@@ -167,34 +185,41 @@
 
 <div #content class="content fade-out" [ngClass]="{'hide': !isparrallaxVisible}">
     <div class="wed-title col-xs-8 offset-xs-2 col-sm-12">
-        <span>Jay </span> 
-        <span>Weds </span> 
-        <span>Toral </span> 
+        <span>{{ i18nLabels.jayWedsToral | translate }}</span>
     </div>
     <!-- <div class="tj-logo"></div> -->
     <div class="gtl-po">
-        <p class="ost">Om Shree Ganeshay namah</p>
+        <p class="ost">
+            <span>{{ i18nLabels.omShreeGaneshayNamah | translate }}</span>
+        </p>
         <img class="g-l" [src]="glImg" alt="ganesha" srcset="">
         <div class="container para">
             <div class="row">
                 <div class="col-sm-8 offset-sm-2">
                     <div>
                         <div>
-                            Mr. Deepak Jayantilal Solanki &
+                            <span>{{ i18nLabels.mrDeepakAnd | translate }}</span>
                         </div>
                         <div>
-                            Mrs. Heena Deepak Solanki
+                            <span>{{ i18nLabels.mrsHeena | translate }}</span>
                         </div>
-                        Request your gracious presence on the auspicious occasion of the Wedding ceremony of their son</div>
-                    <div class="nm">Jay</div>
-                    <p>with</p>
-                    <div class="nm t">Toral</div>
+                        <span>{{ i18nLabels.requestYourGraciousPresence | translate }}</span>
+                    </div>
+                    <div class="nm">
+                        <span>{{ i18nLabels.jay | translate }}</span>
+                    </div>
+                    <p>
+                        <span>{{ i18nLabels.with | translate }}</span>
+                    </p>
+                    <div class="nm t">
+                        <span>{{ i18nLabels.toral | translate }}</span>
+                    </div>
                     <div>
                         <div>
-                            Daughter of Mr. Harshad Tribhuvandas Makani &
+                            <span>{{ i18nLabels.daughterOfMrHarshad | translate }}</span>
                         </div>
                         <div>
-                            Mrs. Mamta Harshad Makani
+                            <span>{{ i18nLabels.mrsMamta | translate }}</span>
                         </div>
                     </div>
                 </div>
