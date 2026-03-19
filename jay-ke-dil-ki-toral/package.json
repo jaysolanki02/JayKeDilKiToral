@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:gh": "ng build --output-path=../docs --base-href=/JayKeDilKiToral/ && mv ../docs/browser/* ../docs/ && rm -rf ../docs/browser"
   },
   "prettier": {
     "printWidth": 100,
