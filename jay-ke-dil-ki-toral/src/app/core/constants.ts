@@ -12,7 +12,6 @@ export class Constants {
     daughterOfMrHarshad: 'daughterOfMrHarshad',
     mrsMamta: 'mrsMamta',
     inviteText: 'inviteText',
-    comeWithBlessing: "comeWithBlessing",
     meet: 'meet',
     the: 'the',
     brideAndGroom: 'brideAndGroom',
